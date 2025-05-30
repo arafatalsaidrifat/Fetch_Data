@@ -1,0 +1,185 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0f2d, #1a1a40);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle, #1f1f4a, #0d0d2b);
+  box-shadow: 0 0 30px #00ffe7;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: #00ffe7;
+  margin: 0;
+  text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+}
+
+
+
+/* Add post section */
+.add-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #1c1c3c;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.3);
+  border-bottom: 2px solid #00ffe7;
+}
+
+.add-section input,
+.add-section textarea {
+  width: 90%;
+  max-width: 600px;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  background: #2a2a4a;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+  box-shadow: 0 0 10px #00ffe755 inset;
+}
+
+.add-section textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+#addPostBtn {
+  margin-top: 10px;
+  padding: 12px 30px;
+  font-size: 1em;
+  background: linear-gradient(to right, #00ffe7, #00d4ff);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ffe7;
+}
+
+#addPostBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffe7, 0 0 50px #00d4ff;
+}
+
+/* Cards container */
+.container {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card styles */
+.card {
+  background-color: #222240;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #00ffe7;
+  box-shadow: 0 0 20px #00ffe7;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #00ffe7, 0 0 50px #00d4ff;
+}
+
+.card h2 {
+  font-size: 1.1em;
+  color: #00ffe7;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Button group */
+.btn-group {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group button {
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #00cfff;
+  color: #000;
+  box-shadow: 0 0 10px #00cfff;
+}
+
+.edit-btn:hover {
+  background-color: #00aacc;
+  box-shadow: 0 0 15px #00cfff;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  box-shadow: 0 0 10px #ff4d4d;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+  box-shadow: 0 0 15px #ff4d4d;
+}
+
+.save-btn {
+  background-color: #22ff88;
+  color: #000;
+  box-shadow: 0 0 10px #22ff88;
+}
+
+.save-btn:hover {
+  background-color: #1acc66;
+  box-shadow: 0 0 15px #22ff88;
+}
+
+/* Responsive fixes */
+@media (max-width: 600px) {
+  .add-section input,
+  .add-section textarea {
+    width: 95%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-group button {
+    width: 100%;
+  }
+}
